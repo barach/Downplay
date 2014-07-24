@@ -1,0 +1,23 @@
+<sheet version="1">
+<markup version="1" identifier="6c658a8a59644c10816f2de2de3c1697" displayName="Downplay">
+	<tag definition="heading1" pattern="#" name="Act"></tag>
+	<tag definition="heading2" pattern="$" name="Scene"></tag>
+	<tag definition="heading3" pattern="&lt;" name="Setting"></tag>
+	<tag definition="heading4" pattern="&gt;" name="Blackout"></tag>
+	<tag definition="heading5" pattern="@" name="Character"></tag>
+	<tag definition="heading6" pattern="(" name="Stage Direction"></tag>
+</markup>
+<string xml:space="preserve">
+<p><tags><tag kind="heading1"># </tag></tags>Act 1</p>
+<p><tags><tag kind="heading2">$ </tag></tags>Scene 1</p>
+<p><tags><tag kind="heading3">&lt; </tag></tags>This is the setting. This is where you introduce the scene. You can describe the set, where people are, what they are doing as the lights come up, etc.</p>
+<p><tags><tag kind="heading5">@ </tag></tags>Tommy</p>
+<p>This is something that Tommy says. It’s dialogue and therefore has no markup associated with it.</p>
+<p><tags><tag kind="heading6">(</tag></tags>These are Tommy’s stage directions. There is no need to close the parentheses, since that will be handled by the formating.</p>
+<p><tags><tag kind="heading5">@ </tag></tags>Jane</p>
+<p>Jane’s dialogue goes here.</p>
+<p><tags><tag kind="heading6">( </tag></tags>Jane’s directions. You can have a space after the markup or not.</p>
+<p>Jane has more to say here.</p>
+<p><tags><tag kind="heading4">&gt;</tag></tags>Blackout</p>
+</string>
+</sheet>
