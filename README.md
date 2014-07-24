@@ -9,13 +9,13 @@ Because it’s just text, Downplay is also a great format for archiving plays wi
 ### What's Included?
 
 The first version of Downplay supports the basics of getting your play written. This includes:
-* **Act**
-* **Scene**
-* **Setting**
-* **Blackout/Curtain/End**
-* **Character Names**
-* **Dialogue**
-* **Stage Direction**
+* **#**  - Act
+* **$**  - Scene
+* **<**  - Setting
+* **>**  - Blackout/Curtain/End
+* **@**  - Character Names
+* **(**  - Stage Direction
+* No markup for Dialogue
 
 ### What's Not Included
 Downplay doesn't attempt to create the Title or Cast of Characters pages. Yet.
