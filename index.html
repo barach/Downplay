@@ -3,32 +3,50 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <meta name="viewport" content="width=640" />
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
 
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
     <title>Downplay by barach</title>
   </head>
 
   <body>
-    <header>
-      <div class="inner">
-        <h1>Downplay</h1>
-        <h2>Simple markup for stage plays</h2>
-        <a href="https://github.com/barach/Downplay" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
+    <a id="forkme_banner" href="https://github.com/barach/Downplay">View on GitHub</a>
+    <div class="shell">
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h3>
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Downplay</h1>
+            <h2>Simple markup for stage plays</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/barach/Downplay/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/barach/Downplay/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h3>
 <a name="welcome-to-downplay" class="anchor" href="#welcome-to-downplay"><span class="octicon octicon-link"></span></a>Welcome to Downplay.</h3>
 
 <p>Downplay is a simple markup syntax for writing, editing and sharing stage plays in plain, human-readable text. Using any text editor, you can write your stage play without worrying about formatting and instead focus on the words, dialogue and action that will bring your play to life.</p>
@@ -40,17 +58,16 @@
 <h3>
 <a name="whats-included" class="anchor" href="#whats-included"><span class="octicon octicon-link"></span></a>What's Included?</h3>
 
-<p>The first version of Downplay supports the basics of getting your play written. This includes:</p>
+<p>The first version of Downplay supports the basics of getting your play written. This includes:
+<strong>#</strong>  - Act
+<strong>$</strong>  - Scene
+<strong>&lt;</strong>  - Setting
+<strong>&gt;</strong>  - Blackout/Curtain/End
+<strong>@</strong>  - Character Names
+<strong>(</strong>  - Stage Direction
+No markup for Dialogue</p>
 
-<ul>
-<li><strong>Act</strong></li>
-<li><strong>Scene</strong></li>
-<li><strong>Setting</strong></li>
-<li><strong>Blackout/Curtain/End</strong></li>
-<li><strong>Character Names</strong></li>
-<li><strong>Dialogue</strong></li>
-<li><strong>Stage Direction</strong></li>
-</ul><h3>
+<h3>
 <a name="whats-not-included" class="anchor" href="#whats-not-included"><span class="octicon octicon-link"></span></a>What's Not Included</h3>
 
 <p>Downplay doesn't attempt to create the Title or Cast of Characters pages. Yet.</p>
@@ -59,26 +76,23 @@
 <a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
 <p>Downplay was created by <a href="https://github.com/barach" class="user-mention">@barach</a> and was inspired by playing around with <a href="http://www.ulyssesapp.com">Ulysses III</a> in trying to set it up for writing plays. Included in the GitHub repository are templates and styles for use with Ulysses and hopefully others will be coming soon. In an effort to make this much more usable across more editors, I hope to create (help welcome) a parser and whatever else is needed for developers to incorporate the Downplay syntax.</p>
-        </section>
+      </section>
 
-        <aside id="sidebar">
-          <a href="https://github.com/barach/Downplay/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/barach/Downplay/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/barach">barach</a> can be found on <a href="https://github.com/barach/Downplay">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
 
-          <p class="repo-owner"><a href="https://github.com/barach/Downplay"></a> is maintained by <a href="https://github.com/barach">barach</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
     </div>
 
-            <script type="text/javascript">
+              <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
