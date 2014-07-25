@@ -8,15 +8,16 @@ Previewing and exporting your Downplay document in Ulysses requires a bit of set
 
 ### Getting Downplay Markup
 Ulysses doesn't support the actual Downplay markup, so we're going to cheat by reassigning headers. There are two ways to get the Downplay markup template into your copy of Ulysses.
-1. Download the [sample file](https://github.com/barach/Downplay/blob/master/Ulysses%20III/Sample%20with%20Markup.ulysses.zip), unzip it and open it with Ulysses and viola, there you have it.
-2. Go the manual route of opening Preferences > Markup and reassigning headers 1-6 as seen here:
+1.  Download the [sample file](https://github.com/barach/Downplay/blob/master/Ulysses%20III/Sample%20with%20Markup.ulysses.zip), unzip it and open it with Ulysses and viola, there you have it.
+2.  Go the manual route of opening Preferences > Markup and reassigning headers 1-6 as seen here:
+
 ![Downplay markup screenshot setup in Ulysses](https://github.com/barach/Downplay/blob/master/Ulysses%20III/Markup_setup.png)
 
 ### Downplay Style
 Now that we've assigned the Downplay syntax to the headers, you'll need a Ulysses style template that's designed to use the headers as if they were actual Downplay markup.
-1. [Download the template](https://github.com/barach/Downplay/blob/master/Ulysses%20III/Downplay.ulstyle
-2. Open Ulysses Preferences > Styles and select **Add Styles...**
-3. Browse to where you saved the template in step 1.
+1.  [Download the template](https://github.com/barach/Downplay/blob/master/Ulysses%20III/Downplay.ulstyle)
+2.  Open Ulysses Preferences > Styles and select **Add Styles...**
+3.  Browse to where you saved the template in step 1.
 
 Now that you have the markup and the style, you'll want to make sure that each document that you write has the Downplay markup selected and that you export using the Downplay style. Magic!
 
