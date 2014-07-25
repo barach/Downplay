@@ -9,7 +9,7 @@ Previewing and exporting your Downplay document in Ulysses requires a bit of set
 ### Getting Downplay Markup
 Ulysses doesn't support the actual Downplay markup, so we're going to cheat by reassigning headers. There are two ways to get the Downplay markup template into your copy of Ulysses.
   1.  Download the [sample file](https://github.com/barach/Downplay/blob/master/Ulysses%20III/Sample%20with%20Markup.ulysses.zip), unzip it and open it with Ulysses and viola, there you have it.
-  2.  Go the manual route of opening Preferences > Markup and reassigning headers 1-6 as seen here:
+  2.  Go the manual route of opening Preferences > Markup and reassigning headers 1-6 (by double clicking and editing) as seen here:
 
 ![Downplay markup screenshot setup in Ulysses](https://github.com/barach/Downplay/blob/master/Ulysses%20III/Markup_setup.png)
 
