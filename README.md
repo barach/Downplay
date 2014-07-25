@@ -10,7 +10,7 @@ Because it’s just text, Downplay is also a great format for archiving plays wi
 
 The first version of Downplay supports the basics of getting your play written. This includes:
 * **#**  - Act
-* **$**  - Scene
+* **&**  - Scene
 * **<**  - Setting
 * **>**  - Blackout/Curtain/End
 * **@**  - Character Names
