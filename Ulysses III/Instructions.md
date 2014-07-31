@@ -11,7 +11,7 @@ Ulysses doesn't support the actual Downplay markup, so we're going to cheat by r
   1.  Download the [sample file](https://github.com/barach/Downplay/blob/master/Ulysses%20III/Sample%20with%20Markup.ulysses.zip), unzip it and open it with Ulysses and viola, there you have it.
   2.  Go the manual route of opening Preferences > Markup and reassigning headers 1-6 (by double clicking and editing) as seen here:
 
-![Downplay markup screenshot setup in Ulysses](https://github.com/barach/Downplay/blob/master/Ulysses%20III/Markup_setup.png)
+![Downplay markup screenshot setup in Ulysses](https://github.com/barach/Downplay/blob/master/Ulysses%20III/Markup-setup.png)
 
 ### Downplay Style
 Now that we've assigned the Downplay syntax to the headers, you'll need a Ulysses style template that's designed to use the headers as if they were actual Downplay markup.
