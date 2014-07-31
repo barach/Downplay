@@ -1,0 +1,77 @@
+body {
+	font-family: Courier, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	margin-top: 96px;
+	margin-bottom: 96px;
+	margin-right: 96px;
+	background-color: white;
+}
+
+
+p {
+	font-family: Courier, sans-serif;
+	font-size: 12px;
+	margin-left: 144px;
+	margin-bottom: 0;
+    margin-top: 0;
+}
+
+.act, .scene, .setting, .blackout, .character, .stage_directions {
+	-webkit-font-smoothing: antialiased;
+	cursor: text;
+	position: relative;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+
+/* Act is # in Downplay  */
+.act {
+	margin-left: 384px;
+	text-decoration: underline;
+	text-transform: uppercase;
+	line-height: 2em;
+	
+}
+
+
+/* Scene is ## in Downplay  */
+.scene {
+	margin-left: 384px;
+	text-decoration: underline;
+	line-height: 2em;
+}
+
+
+/* Setting is < in Downplay  */
+.setting {
+	margin-left: 384px;
+}
+
+
+/* Blackout is > in Downplay  */
+.blackout {
+	margin-left: 384px;
+	text-transform: uppercase;
+}
+
+
+/* Character is @ in Downplay  */
+.character {
+	margin-left: 384px;
+	text-transform: uppercase;
+	margin-bottom: 0;
+
+}
+
+
+/* Stage Directions are wrapped in parenthesis ( ) in Downplay  */
+.stage_directions {
+	margin-left: 264px;
+	margin-right: 144px;
+	margin-bottom: 0;
+    margin-top: 0;
+}
+
+
