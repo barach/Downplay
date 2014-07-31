@@ -1,33 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Downplay by barach</title>
+    <meta name="description" content="Downplay : Simple markup for stage plays">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Downplay</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Downplay</h1>
-        <p>Simple markup for stage plays</p>
 
-        <p class="view"><a href="https://github.com/barach/Downplay">View the Project on GitHub <small>barach/Downplay</small></a></p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/barach/Downplay">View on GitHub</a>
 
+          <h1 id="project_title">Downplay</h1>
+          <h2 id="project_tagline">Simple markup for stage plays</h2>
 
-        <ul>
-          <li><a href="https://github.com/barach/Downplay/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/barach/Downplay/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/barach/Downplay">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/barach/Downplay/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/barach/Downplay/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h3>
 <a name="welcome-to-downplay" class="anchor" href="#welcome-to-downplay"><span class="octicon octicon-link"></span></a>Welcome to Downplay.</h3>
 
@@ -46,7 +49,7 @@
 <li>
 <strong>#</strong>  - Act</li>
 <li>
-<strong>&amp;</strong>  - Scene</li>
+<strong>##</strong>  - Scene</li>
 <li>
 <strong>&lt;</strong>  - Setting</li>
 <li>
@@ -54,7 +57,7 @@
 <li>
 <strong>@</strong>  - Character Names</li>
 <li>
-<strong>(</strong>  - Stage Direction</li>
+<strong>( )</strong>  - Stage Direction are wrapped in parenthesis</li>
 <li>No markup for Dialogue</li>
 </ul><h3>
 <a name="whats-not-included" class="anchor" href="#whats-not-included"><span class="octicon octicon-link"></span></a>What's Not Included</h3>
@@ -66,12 +69,16 @@
 
 <p>Downplay was created by <a href="https://github.com/barach" class="user-mention">@barach</a> and was inspired by playing around with <a href="http://www.ulyssesapp.com">Ulysses III</a> in trying to set it up for writing plays. Included in the GitHub repository is a <a href="https://github.com/barach/Downplay/tree/master/Ulysses%20III">style template and a markup layout</a> for use with Ulysses and hopefully others will be coming soon. In an effort to make this much more usable across more editors, I hope to create (help welcome) a parser and whatever else is needed for developers to incorporate the Downplay syntax.</p>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/barach">barach</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Downplay maintained by <a href="https://github.com/barach">barach</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -82,6 +89,7 @@
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
+
 
   </body>
 </html>
