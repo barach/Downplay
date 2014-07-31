@@ -14,7 +14,7 @@ The first version of Downplay supports the basics of getting your play written. 
 * **<**  - Setting
 * **>**  - Blackout/Curtain/End
 * **@**  - Character Names
-* **( )**  - Stage Direction are wrapped in parenthesis
+* **( )**  - Stage Directions are wrapped in parenthesis
 * No markup for Dialogue
 
 ### What's Not Included
