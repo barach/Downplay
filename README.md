@@ -2,7 +2,9 @@
 
 Downplay is a simple markup syntax for writing, editing and sharing stage plays in plain, human-readable text. Using any text editor, you can write your stage play without worrying about formatting and instead focus on the words, dialogue and action that will bring your play to life.
 
-Similar to other markup syntaxes like John Gruber’s [Markdown](http://daringfireball.net/projects/markdown/) (a general purpose markup syntax), or [Fountain](http://fountain.io) (a screenplay specific markup syntax), Downplay files are  readable, editable, and writable with the minimal markup not getting in the way of your work. Your writing will look and feel like a stage play, and when you're done, you can export it to a markdown parser that will format it to look exactly the way plays are meant to look.
+Similar to other markup syntaxes like John Gruber’s [Markdown](http://daringfireball.net/projects/markdown/) (a general purpose markup syntax), or [Fountain](http://fountain.io) (a screenplay specific markup syntax), Downplay files are  readable, editable, and writable with the minimal markup not getting in the way of your work. Your writing will look and feel like a stage play, and when you're done, you can export it to a markup parser that will format it to look exactly the way plays are meant to look.
+
+Currently, there are no parsers or processors available, but you can use it with [Ulysses III](https://github.com/barach/Downplay/tree/master/Ulysses%20III).
 
 Because it’s just text, Downplay is also a great format for archiving plays without worry of file-format obsolescence or incompatibility. 
 
