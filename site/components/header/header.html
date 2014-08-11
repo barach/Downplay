@@ -1,0 +1,43 @@
+<div ng-init="init()">
+	<div class="show-for-medium-up" style="height:1px; background-color: rgba(0, 0, 0, .2)"></div>
+	<div sticky id="headerMain"  style="width: 100%; z-index: 990000"> 
+			
+			<div class="show-for-medium-up" style="background-color: white; color: black; padding: 10px">
+				<div class="row">
+					<div class="small-9 columns">
+						
+						<centered>
+							<span class="pull-left">
+							     <a style="margin-right: 10px" ui-sref="home">Home</a>
+							     <a style="margin-right: 10px"ui-sref="page1">What is Downplay? </a>
+							     <a style="margin-right: 10px"ui-sref="page2">Examples</a>
+							     <a style="margin-right: 10px"ui-sref="page3">About</a>
+							</span>
+						</centered>
+					</div>
+					
+
+					
+					<div class="small-2 columns pull-right" ng-click="offcanvasToggle()">
+						<centered>		
+							<i class="pull-right" ng-class="{	desktop: 'fa fa-desktop ', 
+																large: 'fa fa-laptop ', 
+																medium: 'fa fa-tablet ', 
+																small: 'fa fa-mobile ', 
+																mobile: 'fa fa-mobile'}[responsive()]">
+							</i>
+							
+							<i class="pull-right" ng-class="{	landscape: 'fa fa-arrows-h ',
+																portrait: 'fa fa-arrows-v '
+																}[responsive('orientation')]">
+																</i>
+						</centered> 
+					</div>		
+				</div>
+					
+			</div>
+			<div style="height: 3px; width:100%; background-color: rgba(0, 0, 0, .85); color: black;"></div>
+			
+			
+	</div>
+</div>

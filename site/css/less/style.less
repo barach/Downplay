@@ -1,0 +1,123 @@
+@import "elements.less";
+@import "gradiants.less";
+
+//////////////////
+/* COLOR SCHEME */
+//////////////////
+    .base-color{
+        .gray-gradient;
+    }
+    .base-color-active{
+        .gray-gradient-active;
+    }
+
+    .primary-color{
+       .blue-gradient;
+    }
+    .primary-color-active{
+        .blue-gradient-active;
+    }
+    
+    .info-color{
+         .orange-gradient;
+    }
+    .info-color-active{
+         .orange-gradient-active;
+    }    
+    .success-color{
+         .green-gradient;
+    }
+    .success-color-active{
+         .green-gradient-active;
+    }        
+    
+/*--------------*/
+
+
+//////////////////
+/*  TEXT COLOR  */
+//////////////////
+    @text-black:            black;
+    @text-white:            white;
+/*--------------*/
+
+
+
+
+////////////////
+/*  SHAPING */
+////////////////
+
+    .buttonSpacing{
+        padding-left: 15px;
+        padding-right: 15px; 
+        padding-top: 10px;
+        padding-bottom: 10px;
+        
+           
+        text-decoration: none;
+        //cursor: pointer;             
+    }
+/*--------------*/
+
+
+
+     
+////////////////
+/*  MIXINS */
+////////////////
+    .sharedClasses{
+        .buttonSpacing;
+        .rounded(5px); 
+        //.make-tabs-top;
+        //.make-tabs-bottom;
+    }
+    
+    .flat-base{
+        color:                      @text-white;    
+        .base-color;
+        .sharedClasses;
+        &:hover {    
+            .base-color-active;
+        } ;  
+               
+    }    
+    
+    .flat-primary{
+        color:                      @text-white;    
+        .primary-color;
+        .sharedClasses;
+        &:hover {    
+            .primary-color-active;
+        } ;           
+    }
+    
+    .flat-info{
+        color:                      @text-white;   
+        .info-color;
+        .sharedClasses;
+        &:hover {    
+             .info-color-active;
+        } ;  
+    }
+    
+    .flat-warning{
+        color:                      @text-white; 
+        .warning-color;
+        .sharedClasses;
+        &:hover {     
+             .warning-color-active;
+        } ;    
+        
+    }
+    
+    .flat-success{
+        color:                      @text-white;    
+        .success-color;
+        .sharedClasses;
+        &:hover {     
+            .success-color-active;
+        } ;    
+        
+    }    
+/*--------------*/

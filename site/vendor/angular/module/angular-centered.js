@@ -1,0 +1,1 @@
+angular.module("angular-centered",[]).directive("centered",function(){return{restrict:"ECA",transclude:!0,template:'<div class="angular-center-container">						<div class="angular-centered" ng-transclude>						</div>					</div>'}});

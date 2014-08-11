@@ -1,0 +1,163 @@
+
+	
+		<div class="row">
+			<div class="small-12 columns">
+
+				<h1> {{greeting}}</h1>
+				<br>
+			</div>		
+		</div>
+		<hr>	
+
+
+		<!-- MAIN -->
+		<div class="row"> 
+			<div class="small-12 columns">
+			<centered>
+				<h3>Standard carousel with basic controls</h3>
+			</centered>  
+			<div id="carousel-1" class="rn-carousel-container" >
+				<ul rn-carousel="" rn-carousel-control="" > 
+		            <li ng-repeat="slide in standard">	              
+		                	<small>slide {{slide.id}}</small> 
+		                	<img ng-src="{{slide.img}}" class="img-responsive" style="cursor: pointer" >
+		                	<br>
+		            </li>
+	     	   </ul>
+	        </div>
+	        <br>
+       		</div>	
+    	</div>
+        <hr>
+        <!-- END -->
+        
+        
+		<!-- CUSTOM CONTROLS -->
+		<div class="row"> 
+			<div class="small-12 columns">		
+				<centered>
+					<h3>Custom controls (static)</h3>
+				</centered>     
+		    </div>  
+		    
+	       	<div class="ng-cloak container" style="position: absolute; z-index: 1000">	        
+	        	<i class="fa fa-backward fa-2x" style="cursor: pointer" ng-click="cprev()"></i>
+	        </div>
+	        <div class="ng-cloak container" style="position: absolute; right: 0; z-index: 1000">
+	            <i class="fa fa-forward fa-2x pull-right"  style="cursor: pointer" ng-click="cnext()"></i>	           
+	        </div>
+		            	   
+	        <ul rn-carousel rn-carousel-buffered rn-carousel-index="customIndex" rn-carousel-swipe="{{swipe}}" class="my-slider ng-cloak" >
+	            <li ng-repeat="slide in custom">
+		                <div class="small-10 small-offset-1 columns">		                		                			                
+		                	<centered> 
+		                	<small>slide {{slide.id}}</small><br>
+		                	<img ng-src="{{slide.img}}" class="img-responsive" style="cursor: pointer" >
+		                	</centered>
+		                	<br>
+		                </div>	  
+	            </li>
+	        </ul>
+	        
+       		</div>
+      	</div>
+      	<hr>
+        <!-- END -->   
+        
+        
+        
+        <!-- UNIQUE -->
+		<div class="row"> 
+			<div class="small-12 columns">		
+				<centered>
+					<h3>Custom controls (individual)</h3>
+				</centered>     
+		    </div> 
+		     
+	        <ul rn-carousel rn-carousel-buffered rn-carousel-index="uniqueIndex" rn-carousel-swipe="{{swipe}}" class="my-slider ng-cloak" >
+	            <li ng-repeat="slide in unique">
+		                <div class="small-1 columns" >	
+		                	&nbsp		
+		                	<i class="fa fa-arrow-circle-left fa-2x" ng-class="{false: 'hidden', true: 'visible'}[$index > 0]"  style="cursor: pointer; margin-top: 100px" ng-click="uprev()"></i>
+		                </div>
+		                <div class="small-10 columns">
+		                	<centered>
+		                		<small>slide {{slide.id}} </small>
+		                		<br> 
+		                		<img ng-src="{{slide.img}}" class="img-responsive" style="cursor: pointer" >
+		                		<br>
+		                		<small>{{slide.id}} / {{unique.length}}</small>
+		                		<br><br>
+		                	</centered>
+		                	<br>
+		                </div>	
+		                <div class="small-1 columns">
+							&nbsp
+		                	<i class="fa fa-arrow-circle-right fa-2x" ng-class="{false: 'hidden', true: 'visible'}[slide.id < unique.length]"  style="cursor: pointer;  margin-top: 100px" ng-click="unext()"></i>
+		                </div>  
+		                
+	            </li>
+	        </ul>			
+		</div>
+		<hr>
+		<!-- END -->             
+        
+        <!-- THUMBS -->
+        <div class="row">
+	        <div class="small-12 columns">
+	        <centered>
+	        	<h3>Standard carousel with thumbs navigation </h3>
+	        </centered>        
+	        <ul rn-carousel rn-carousel-index="thumbIndex" class="my-slider ng-cloak">
+	            <li ng-repeat="slide in thumb">
+		               
+		                	<small>slide {{slide.id}}</small> 
+		                	<img ng-src="{{slide.img}}" class="img-responsive" style="cursor: pointer" >
+		                	<br>
+		                      	
+	            </li>
+	        </ul>
+	        <br>
+	        <div class="ng-cloak">
+	            <div class="thumb" ng-repeat="slide in thumb" ng-click="$parent.thumbIndex=$index" ng-class="{'is-active': ($parent.thumbIndex==$index)}" >
+		                <div class="small-1 columns">	                	
+		                	<img ng-src="{{slide.img}}" class="img-responsive" style="cursor: pointer" >
+		                	<br>
+		                </div>   	
+	            </div>
+	        </div>
+       		</div>
+       	</div>
+		<hr>
+		<!-- END THUMB -->
+		
+		
+        <!-- NAVIGATION -->
+        <div class="row">
+	        <div class="small-12 columns">
+		        <centered>
+		        	<h3>NAVIGATOR </h3>
+		        </centered>        
+		        <ul rn-carousel rn-carousel-indicator rn-carousel-index="navIndex" class="my-slider ng-cloak">
+		            <li ng-repeat="slide in nav">
+			               
+			                	<small>slide {{slide.id}}</small> 
+			                	<img ng-src="{{slide.img}}" class="img-responsive" style="cursor: pointer" >		                	
+			                      	
+		            </li>
+		        </ul>
+
+        	</div>
+        </div>
+		<hr>
+		<!-- END THUMB -->		
+
+
+ 
+    	
+		<br><br>
+       	<br><br>
+       	<br><br>
+
+
+			

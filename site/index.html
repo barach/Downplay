@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  
+  
+  <head>
+	<title>Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+	<!-- REQUIRE -->
+	<script data-main="require/main" src="require/require.js"></script>	
+	
+	<!-- CSS RESET -->
+	<link type="text/css" href="css/reset.css"	rel="stylesheet"	media="screen" />
+	
+	<!-- VENDOR CSS -->
+	<link type="text/css" href="vendor/foundation5/css/normalize.css"	rel="stylesheet"	media="screen" />
+	<link type="text/css" href="vendor/centered/css/angular-centered.css"	rel="stylesheet"	media="screen" />	
+	<link type="text/css" href="vendor/foundation5/css/foundation.css"	rel="stylesheet"	media="screen" />
+	<link type="text/css" href="vendor/carousel/css/angular-carousel.css"	rel="stylesheet"	media="screen" />
+	<link type="text/css" href="vendor/loadingBar/css/loading-bar.css"	rel="stylesheet"	media="screen" />	
+	<link type="text/css" href="vendor/toaster/css/toaster.css"	rel="stylesheet"	media="screen" />
+	<link type="text/css" href="vendor/screenblur/css/st-blurred-dialog.css"	rel="stylesheet"	media="screen" />
+	<link type="text/css" href="vendor/jsonexplorer/css/gd-ui-jsonexplorer.css"	rel="stylesheet"	media="screen" />
+	<link type="text/css" href="vendor/multiSelect/css/angular-multi-select.css"	rel="stylesheet"	media="screen" />
+	
+		
+	<!-- GOOGLE FONTS -->
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu|Volkhov' rel='stylesheet' type='text/css'>
+	
+	<!-- FONT AWESOME -->
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	
+	<!-- CUSTOM -->
+	<link type="text/css" href="css/style.css"		rel="stylesheet"	media="screen" />
+	<link type="text/css" href="css/custom.css"		rel="stylesheet"	media="screen" />
+	<link type="text/css" href="css/animation.css"	rel="stylesheet"	media="screen" />
+	<link type="text/css" href="css/dropzone.css"	rel="stylesheet"	media="screen" />
+	<link type="text/css" href="css/parallax.css"	rel="stylesheet"	media="screen" />
+	
+  </head>
+  
+  
+  <body style=""> 
+  	<!-- FLASH MESSAGES -->
+  	<flash:messages></flash:messages>
+  	
+  		<!-- OFF CANVAS -->  		
+		<div id="offCanvasMain" class="offcanvas-hide">  				
+			<div ui-view="offcanvas" autoscroll="false" class="offcanvas-wrapper" ng-cloak ></div>
+		</div>
+  		
+		<!-- MOBILE OFF CANVAS SLIDER BUTTON -->
+		<div style="position: fixed; bottom: 2%; left: 10px; z-index: 999999" class="show-for-small-only">
+			<div ui-view="overlay" autoscroll="false"></div>		
+		</div>
+		
+	    <!-- PERSISTANT MODALS-->		  
+	    <div ui-view="ui-modals" autoscroll="false"  ng-cloak ></div>		
+	    <div ui-view="account-modals" autoscroll="false"  ng-cloak ></div>
+		
+		<!-- TOASTERS -->
+		<toaster-container toaster-options="{'position-class': 'toast-bottom-right', 'time-out': 3000}"></toaster-container>
+		
+	  	
+	  	<!-- VIEW CONTAINER -->
+    	<div st-blurred-dialog-region>
+
+	    	<!-- HEADER -->	    	
+		    <div id="headerMain" ui-view="header" autoscroll="false" class="ng-ignore" ng-cloak></div>
+			<div id="headerFiller" class="show-for-medium-up"></div> <!-- SMOOTH TRANSISTION -->
+
+    		<!-- HEADER IMAGE -->
+	    	<div ui-view="slider" autoscroll="false" class="ng-ignore" ng-cloak></div>
+			  
+		    <!-- COMPONENTS-->		  
+		    <div ui-view="body" autoscroll="false"  ng-cloak ></div>
+		    
+		    <!-- FOOTER -->
+			<div ui-view="footer" autoscroll="false" class="ng-ignore" ng-cloak></div>
+
+		</div>
+		
+		<!-- BLUR OVERLAY -->
+		<st-blurred-dialog-overlay></st-blurred-dialog-overlay>
+		
+  </body>
+  
+  
+  
+  
+</html>
+

@@ -1,0 +1,83 @@
+.ng-enter {
+  	-webkit-transition: 1.5s;
+  	transition: .75s;
+  	opacity: 0;
+  	
+
+  	
+}
+
+
+.ng-enter-active {	
+  	opacity: 1; 
+	
+}
+
+.ng-leave {
+  opacity: 1;
+}
+
+.ng-leave-active {
+  opacity: 0;
+}
+
+.ng-move {
+  -webkit-transition: 1s;
+  transition: 1s;  
+  background: gold;
+}
+
+.ng-move-active {
+  background: #fff;
+}
+
+.ng-ignore{
+	opacity: 1;
+	margin-left: 0;
+}
+
+
+.ui-show {
+  color: blue;
+  transition: all 0.5s ease; /* You should probably browser-prefix this */
+}
+.ui-hide {
+  opacity: 0;
+  transition: all 0.5s ease; /* You should probably browser-prefix this */
+}
+
+
+.offcanvas-wrapper{
+	position: fixed; 
+	width: 40%;
+	min-width: 300px;
+	max-width: 800px;   
+	height: 100%; 
+	overflow: auto; 
+	background-color: black; 
+	z-index: 999900;
+}
+
+.offcanvas-active{
+	position: absolute; 
+	background-color: black; 
+	width: 100%; 
+	margin-left: 0; 
+	  -webkit-transition: all 0.35s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+	  -ms-transition: all 0.35s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+	  -moz-transition: all 0.35s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+	  -o-transition: all 0.35s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+	  transition: all 0.35s cubic-bezier(0.16, 0.63, 0.45, 0.98); 	
+}
+
+.offcanvas-hide{
+	position: absolute; 
+	width: 100%; 
+	margin-left: -100%;
+	  -webkit-transition: all .75s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+	  -ms-transition: all .75s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+	  -moz-transition: all .75s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+	  -o-transition: all .75s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+	  transition: all .75s cubic-bezier(0.16, 0.63, 0.45, 0.98); 				
+}	
+

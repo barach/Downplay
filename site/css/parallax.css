@@ -1,0 +1,40 @@
+
+
+
+
+.scroll-pattern-1 { 
+	background: url(../media/parallax/pattern1.png);
+	background-repeat:repeat;
+	background-attachment:fixed;
+	height: auto;  
+	margin: 0 auto; 
+    position: relative; 
+}
+
+
+.scroll-pattern-2 { 
+	background: url(../media/parallax/pattern2.jpg);
+	background-repeat:repeat;
+	background-attachment:fixed;
+	height: auto;
+	margin: 0 auto; 
+    position: relative; 
+}
+
+.scroll-pattern-3 { 
+	background: url(../media/parallax/pattern3.jpg);
+	background-repeat:repeat;
+	background-attachment:fixed;
+	height: auto;
+	margin: 0 auto; 
+    position: relative; 
+}
+
+.scroll-pattern-4 { 
+	background: url(../media/parallax/pattern4.png);
+	background-repeat:repeat;
+	background-attachment:fixed;
+	height: auto;
+	margin: 0 auto; 
+    position: relative; 
+}
