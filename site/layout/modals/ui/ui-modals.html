@@ -1,0 +1,71 @@
+	
+	
+	<!-- EXAMPLE MODAL -->
+	<script type="text/ng-template" id="foundationModal.html">
+		<div style="max-width: 600px; width: 100%" class="modal-body">
+			<h3>I'm a modal!</h3>
+			<hr>
+		    <ul>
+		      <li ng-repeat="item in items">
+		        <a ng-click="selected.item = item">{{ item }}</a>
+		      </li>
+		    </ul>
+		    <input ng-model="selected.name">
+		    <p>Selected: <b>{{ selected.item }}</b></p>
+			<button class="button" ng-click="ok()">OK</button>
+			<a class="close-reveal-modal" ng-click="close()"><i class="fa fa-caret-square-o-left"></i></a>
+		</div>
+	</script>
+	<!-- END MODAL -->
+
+
+
+  	
+	<!-- CONFIRM MODAL -->
+	<script type="text/ng-template" id="confirmModal.html">
+		<div style="max-width: 600px; width: 100%" class="modal-body">
+			<h3>Are you sure?</h3>
+			<br><br>
+			<centered>	
+				<button class="button" ng-click="yes()" style="margin: 20px">Yes</button>
+				<button class="button" ng-click="no()"  style="margin: 20px">No</button>
+			</centered>
+			<a class="close-reveal-modal" ng-click="cancel()"><i class="fa fa-caret-square-o-left"></i></a>
+		
+		</div>
+	</script>
+  	<!-- END MODAL -->  	
+  	
+  	
+	<!-- MODAL CONTENTS -->
+	<script type="text/ng-template" id="browserInfoModal.html" >
+		<div style="width: 100%" class="white-font">
+			
+			<small>Testing information</small>
+			<br><br>
+			<h3>Browser Information</h3>		
+			<h5>Selected: <strong>{{detectedType}}</strong><h5>
+			
+			<br><br>
+				<centered>
+					<img ng-src="{{detected}}" class="img-thumbnail" />			
+				</centered>
+			<br><br>
+			
+			
+			<a class="close-reveal-modal" ng-click="dismiss()"><i class="fa fa-caret-square-o-left"></i></a>
+			<div style="position: absolute; bottom: 2%; width: 100%">
+				
+					<div class="small-12 columns">
+						<centered>
+							<small>Website Design by Allen Royston | 2014</small><br>
+							<small><a href="http://www.codeandlogic.com">www.codeandlogic.com</a></small>
+						</centered>
+					</div>
+				
+			</div>
+			
+		</div>
+	</script>
+	<!-- END MODAL -->  	
+

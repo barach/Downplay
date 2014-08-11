@@ -1,0 +1,328 @@
+
+	<!-- LOGIN MODAL -->
+	<script type="text/ng-template" id="loginModal.html">
+		<div style="max-width: 600px; width: 100%" class="modal-body">
+			
+			<div ng-class="{true: 'hidden', false: 'visible'}[isLoading]">
+				<div class="row">
+					<div class="small-12 medium-6 columns">
+						<h3>User Login</h3>
+						<br><br>
+					</div>
+				</div>			
+				
+				<div class="row">
+					<div class="small-12 medium-6 columns">
+						<label>Username:</label>
+						<input ng-model="selected.username" class="small-12 columns">
+							
+					</div>
+					
+					<div class="small-12 medium-6 columns">
+						<label>Password:</label>				
+						<input type="password" ng-model="selected.password" class="small-12 columns">
+							
+					</div>
+					
+					<div class="small-12 columns">
+						<button class="button tiny small-4 columns" 			ng-click="reset()">RESET PASSWORD</button>
+						<button class="button pull-right tiny small-4 columns" 	ng-click="ok()">SUBMIT</button>
+					</div>					
+				</div>
+			</div>
+			
+					
+			<div class="row">
+				<div class="small-12 columns">
+					<div ng-class="{false: 'hidden', true: 'visible'}[isLoading]">
+						<centered>
+								<small>Thinking!  It hurts!</small>
+								<br> 		
+								<rotating-plane-spinner></rotating-plane-spinner>									
+						</centered>		
+					</div>
+				</div>
+			</div>
+		
+			<a class="close-reveal-modal" ng-click="close()"><i class="fa fa-caret-square-o-left"></i></a>
+			
+		</div>
+	</script>
+  	<!-- END MODAL -->
+  	
+
+	<!-- CREATE ACCOUNT MODAL -->
+	<script type="text/ng-template" id="createModal.html">
+		<div style="max-width: 600px; width: 100%" class="modal-body">
+			
+			<div class="row" ng-class="{false: 'visable', true: 'hidden'}[isChecking]">
+				<h3>Create Account</h3>
+
+	        	<div class="small-12 columns">	          
+		        	<div class="small-12 columns" ng-class="{true: 'hidden', false: 'visable'}[isUpload]">
+						<formly-form result="formData"
+									 fields="formFields"
+									 options="formOptions"
+									 ng-submit="submit()">
+						</formly-form>	        				
+					</div>
+					
+					<div class="small-12 columns" ng-class="{false: 'hidden', true: 'visable'}[isUpload]">
+						
+						<br><br>
+						<button class="button expand" ng-click="close()"><small>Skip Photo Upload</small></button>
+						<br>
+						
+						<div class="file-input-wrapper">
+						 	<centered><label class="white-font">Image Quality: {{resizeData.quality}}%</label></centered>
+						 	<button class="btn-file-input"><small>Select an image</small></button>																  
+							<input id="imageDuplicate1" type="file" accept="image/*"  image="imageDuplicate1"  resize-max-width="{{resizeData.sizes}}"  resize-quality="{{resizeData.quality}}" resize-type="resizeData.type" />
+						</div>						
+						
+						
+						
+			        	<div ng-repeat="image in imageDuplicate1.data">
+			          		<div class="small-4 columns" style="padding: 20px;">				          			
+			          			<centered>
+			          				<small>- {{$index}} -</small>
+			          				<br>
+			            			<img ng-show="imageDuplicate1"  ng-src="{{image.src}}"/>
+			            			<br>
+			            			<small>Width: {{image.width}}px / Height: {{image.height}}px</small>
+			            			<br>
+			            			<small>Quality: {{image.quality}}</small>
+			            			<br>
+			            			<small>Approximate File Size: {{image.size}}</small>
+			            		</centered>
+			            	</div>
+			        	</div>	
+			        	
+
+						  				  
+					  	<div ng-class="{true: 'visible', false: 'hidden'}[imageDuplicate1.data.length > 0]">
+					  		<button class="button expand" ng-click="uploadImage(imageDuplicate1.data)">Start Upload</button>
+					  	</div>
+						 			        	
+		      		</div>					
+					
+				</div>
+			</div>
+			
+			
+			<div ng-class="{true: 'visable', false: 'hidden'}[isChecking]">
+				<centered>
+						<small>Thinking!  It hurts!</small>
+						<br> 		
+						<rotating-plane-spinner></rotating-plane-spinner>			
+				</centered>	
+			</div>
+				
+			<a class="close-reveal-modal" ng-click="cancel()"><i class="fa fa-caret-square-o-left"></i></a>
+		</div>
+	</script>
+  	<!-- END MODAL -->
+
+	<!-- EDIT PROFILE MODAL -->
+	<script type="text/ng-template" id="editProfileModal.html">
+		<div style="max-width: 600px; width: 100%" class="modal-body">
+			<div class="row">
+				<h3>Select a new profile picture.</h3>
+				<br><br>
+			</div>
+			
+			<div class="row">
+				<centered>	
+					<div class="small-12 columns" ng-class="{false: 'hidden', true: 'visable'}[isUpload]">
+						
+						<div class="file-input-wrapper">
+						  <centered><label class="white-font">Image Quality: {{resizeData.quality}}%</label></centered>
+						 	<button class="btn-file-input"><small>Select an image</small></button>	
+						  																	  
+							<input id="newProfileImg" type="file" accept="image/*"  image="newProfileImg"  resize-max-width="{{resizeData.sizes}}"  resize-quality="{{resizeData.quality}}" resize-type="resizeData.type" />
+						</div>						
+						
+						<div ng-show="newProfileImg">
+							<centered>
+								<small>Preview</small>
+								<br>						
+								<img ng-src="{{newProfileImg.data[2].src}}"/>
+							</centered>
+							<br><br>
+						</div>
+	 				  
+					  	<div ng-class="{true: 'visible', false: 'hidden'}[newProfileImg.data.length > 0]">
+					  		<button class="button expand" ng-click="uploadImage(newProfileImg.data)"><small>Start Upload</small></button>
+					  	</div>
+						 			        	
+		      		</div>	
+				</centered>
+			</div>
+			
+			<a class="close-reveal-modal" ng-click="cancel()"><i class="fa fa-caret-square-o-left"></i></a>
+		
+		</div>
+	</script>
+  	<!-- END MODAL -->  
+  	
+  	
+	<!-- EDIT PROFILE DATA MODAL -->
+	<script type="text/ng-template" id="editProfileDataModal.html">
+		<div style="max-width: 600px; width: 100%" class="modal-body">
+			<div class="row">
+				<h3>Edit account information.</h3>
+				<br><br>
+			</div>
+			
+			<div ng-class="{false: 'hidden', true: 'visable'}[pageLoading]">
+				<div ng-include src="'fragments/waiting/waveSpinner.html'"></div>
+			</div>
+			
+			<!-- PAGE LOADING -->
+			<div ng-class="{true: 'hidden', false: 'visable'}[pageLoading]">
+			
+				<div ng-class="{false: 'visable', true: 'hidden'}[isChecking]">
+					<div class="row">
+						<div class="small-10 small-offset-1 columns">
+							<label>Email:</label>
+							<input class="small-12 columns" ng-model="userData.email" disabled></input>
+							<br>
+	
+							<label>Username:</label>
+							<input class="small-12 columns" ng-model="userData.userName" ></input>
+							<br>	
+							
+							<label>First Name:</label>
+							<input class="small-12 columns" ng-model="userData.firstName" ></input>
+							<br>			
+		
+							<label>Last Name:</label>
+							<input class="small-12 columns" ng-model="userData.lastName" ></input>
+							<br>	
+								
+							<br><br>	
+							<br><br>
+							<centered>
+								<button ng-click="update()" class="tiny button">UPDATE</button>
+							</centered>										
+																						
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div ng-class="{true: 'visable', false: 'hidden'}[isChecking]">
+				<centered>
+						<small>Thinking!  It hurts!</small>
+						<br> 		
+						<rotating-plane-spinner></rotating-plane-spinner>			
+				</centered>	
+			</div>			
+			
+			
+			<a class="close-reveal-modal" ng-click="cancel()"><i class="fa fa-caret-square-o-left"></i></a>
+		
+		</div>
+	</script>
+  	<!-- END MODAL -->  
+  	
+  	
+	<!-- CHANGE PASSWORD MODAL -->
+	<script type="text/ng-template" id="changePasswordModal.html">
+		<div style="max-width: 600px; width: 100%" class="modal-body">	
+			
+			<div ng-class="{true: 'hidden', false: 'visable'}[isThinking]">
+				<div class="row">
+					<h3><img ng-src="{{userData.profile.small}}" style="padding-right: 15px"/>Change Password</h3>
+					<br><br>
+				</div>
+				
+			
+				<div class="row">
+						<label>Current Password:</label>
+						<input class="small-12 columns" ng-model="userData.currentPassword"></input>
+						<br>
+
+						<label>New Password:</label>
+						<input class="small-12 columns" ng-model="userData.newPassword" ></input>
+						<br>	
+						
+						<label>Reenter Password:</label>
+						<input class="small-12 columns" ng-model="userData.confirmPassword" ></input>
+						<br>
+						
+						
+						<br><br>	
+						<br><br>
+						<centered>
+							<button ng-click="update()" class="tiny button">UPDATE</button>
+						</centered>	
+						
+				</div>
+				
+				<a class="close-reveal-modal" ng-click="cancel()"><i class="fa fa-caret-square-o-left"></i></a>
+			</div>
+			
+			
+			<div class="row">
+				<div ng-class="{false: 'hidden', true: 'visable'}[isThinking]">
+					<centered>
+							<small>Thinking!  It hurts!</small>
+							<br> 		
+							<rotating-plane-spinner></rotating-plane-spinner>			
+					</centered>	
+				</div>
+			</div>		
+			
+		</div>
+	</script>
+  	<!-- END MODAL -->
+
+
+	<!-- DELETE MODAL -->
+	<script type="text/ng-template" id="deleteModal.html">
+		<div style="max-width: 600px; width: 100%" class="modal-body">	
+			
+			<div ng-class="{true: 'hidden', false: 'visable'}[isThinking]">
+				<div class="row">
+					<h3><img ng-src="{{userData.profile.small}}" style="padding-right: 15px"/> Delete Account</h3>
+					<br><br>
+				</div>
+				
+				<div class="row">
+						<div class="small-12 medium-6 columns">
+							<label>Username:</label>
+							<h6>{{userData.data.email}}</h6>	
+						</div>
+						
+						<div class="small-12 medium-6 columns">
+							<label>Password:</label>				
+							<input ng-model="userForm.password" class="small-12 columns">	
+						</div>
+				</div>
+				
+				<div class="row">
+					<br><br>
+					<br><br>
+					<button class="button pull-right tiny" ng-click="beginDelete()" >Delete</button>
+				</div>				
+				
+				<a class="close-reveal-modal" ng-click="cancel()"><i class="fa fa-caret-square-o-left"></i></a>
+			</div>
+			
+			
+			<div class="row">
+				<div ng-class="{false: 'hidden', true: 'visable'}[isThinking]">
+					<centered>
+							<small>Thinking!  It hurts!</small>
+							<br> 		
+							<rotating-plane-spinner></rotating-plane-spinner>			
+					</centered>	
+				</div>
+			</div>		
+			
+		</div>
+	</script>
+  	<!-- END MODAL -->
+  	
+
